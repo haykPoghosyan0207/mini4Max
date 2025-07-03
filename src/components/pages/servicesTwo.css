@@ -1,0 +1,168 @@
+.servicesContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.servicesCardsContainer,
+.servicesCardsContainerTwo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicesCard {
+    width: 90%;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.servicesCard.expanded .cardDesc {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #003366;
+    font-size: 16px;
+}
+
+.expandBtn {
+    background-color: #E07116;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+}
+
+.cardContent {
+    /*font-size: 16px;*/
+    color: #444;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.cardIMg {
+    width: 100%;
+    height: 75px;
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardDescContent{
+    font-size: 24px;
+    color: #E07116;
+}
+․cardIMg p {
+    font-size: 45px;
+}
+/*.cardContent p {*/
+/*    color: #E07116;*/
+/*    font-size: 16px;*/
+/*    line-height: 1.6;*/
+/*}*/
+
+.servicesMobileSlider {
+    display: none;
+    width: 100%;
+    padding: 20px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.servicesMobileSlider .servicesCard {
+    width: 90%;
+}
+
+/* Tablet & Small Laptops */
+@media (max-width: 768px) {
+    .servicesContainer.desktop {
+        display: none;
+    }
+
+    .servicesMobileSlider {
+        display: block;
+    }
+
+    /*.servicesMobileSlider .servicesCard {*/
+    /*    padding: 16px;*/
+    /*}*/
+
+    .cardTop {
+        font-size: 15px;
+    }
+
+    .cardContent p {
+        font-size: 13px;
+    }
+}
+
+/* Extra small devices (phones ~ 375px) */
+@media (max-width: 480px) {
+    .servicesMobileSlider .servicesCard {
+        width: 75%;
+    }
+
+    .cardTop h1 {
+        font-size: 16px;
+    }
+
+    .expandBtn {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .cardContent p {
+        font-size: 12.5px;
+    }
+
+    .cardIMg {
+        font-size: 24px;
+    }
+}
+
+/* Ultra small devices (~320px like iPhone SE) */
+@media (max-width: 360px) {
+    .servicesMobileSlider .servicesCard {
+        width: 98%;
+        /*padding: 12px;*/
+    }
+
+    .cardTop h1 {
+        font-size: 15px;
+    }
+
+    .cardContent p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .expandBtn {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+    }
+}

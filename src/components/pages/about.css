@@ -1,0 +1,319 @@
+.aboutPageContainer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.aboutHeader{
+    background: linear-gradient(277.77deg, #121315 -0.76%, #0B3245 100%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+}
+
+
+.aboutHeaderImage {
+    width: 30%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.aboutHeaderImage img {
+    width: 80%;
+    height: auto;
+}
+
+.aboutHeaderText {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.valuesSection {
+    width: 100%;
+    background-color: #000000;
+    padding: 30px 0;
+    text-align: center;
+    height: 55vh;
+}
+
+.valuesTitle {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.aboutGrid {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: nowrap;
+    height: 80%;
+
+}
+
+.aboutCard {
+    background-color: #1e293b;
+    border-radius: 16px;
+    height: 300px;
+    padding: 20px;
+    width: 150px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.aboutCard:hover {
+    width: 240px;
+}
+
+.aboutCardText {
+    color: orange;
+    font-size: 20px;
+    font-weight: 600;
+    transform: rotate(90deg);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+.aboutCardDesc {
+    color: white;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+}
+.aboutCard:hover .aboutCardText {
+    transform: rotate(0deg);
+}
+
+.aboutCard:hover .aboutCardDesc {
+    opacity: 1;
+    max-height: 200px;
+}
+
+.smartFeatures {
+    padding: 40px 0;
+    background-color: #0f172a;
+    display: flex;
+    flex-direction: column;
+    /*gap: 15px;*/
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.featureRow {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.featureRow.reverse {
+    flex-direction: row-reverse;
+}
+
+.featureImg {
+    width: 50%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.featureImg img {
+    width: 100%;
+    height: 50%;
+}
+
+.featureText {
+    flex: 1;
+    width: 150px;
+    color: white;
+}
+
+.featureText h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.featureText p {
+    font-size: 25px;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+    .aboutHeader {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .aboutHeaderImage {
+        width: 80%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .cardText {
+        transform: rotate(0deg) !important;
+        text-align: center;
+    }
+
+    .valueCard:hover .cardText {
+        transform: rotate(0deg);
+    }
+    .aboutHeaderImage img {
+        width: 100%;
+    }
+
+    .aboutHeaderText {
+        width: 90%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .aboutGrid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    .aboutCard {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .smartFeatures {
+        padding: 20px 0;
+    }
+
+    .featureRow {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .featureImg {
+        width: 90%;
+        height: auto;
+    }
+
+    .featureImg img {
+        width: 100%;
+        height: auto;
+    }
+
+    .featureText {
+        width: 90%;
+        text-align: center;
+    }
+
+    .featureText h3 {
+        font-size: 20px;
+    }
+
+    .featureText p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutHeader {
+        padding: 15px 0px;
+    }
+
+    .aboutHeaderImage {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .aboutHeaderImage img {
+        width: 90%;
+    }
+
+    .aboutHeaderText {
+        width: 100%;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .valuesTitle {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .aboutCard {
+        width: 90%;
+        padding: 16px;
+        height: auto;
+        rotate: 0;
+    }
+
+    .aboutCardText {
+        transform: rotate(0deg) !important;
+        text-align: center;
+
+    }
+    .aboutCard:hover {
+        height: 1500px;
+    }
+
+    .aboutCard:hover .aboutCardText {
+        font-size: 12px;
+        transform: rotate(0deg);
+    }
+    .aboutCard:hover .aboutGridDesc {
+        height: 98%;
+    }
+
+
+    .aboutGridDesc {
+        font-size: 13px;
+    }
+
+    .smartFeatures {
+        padding: 15px 0;
+    }
+
+    .featureRow {
+        gap: 15px;
+    }
+
+    .featureImg {
+        width: 100%;
+    }
+
+    .featureText {
+        width: 100%;
+        /*padding: 0 12px;*/
+    }
+
+    .featureText h3 {
+        font-size: 18px;
+    }
+
+    .featureText p {
+        font-size: 14px;
+    }
+}

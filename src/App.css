@@ -1,0 +1,13 @@
+#root {
+  max-width: 100%;
+  margin: 0 ;
+  padding: 0;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  /*gap: 1rem 0;*/
+  background: linear-gradient(277.77deg, #121315 -0.76%, #0B3245 100%);
+  /*background:#fff;*/
+
+}
+
