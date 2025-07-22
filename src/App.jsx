@@ -69,9 +69,6 @@ function App() {
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/blog" element={<Blog />} />
 
-                {/* demo iframe route */}
-                <Route path="/demo/clothersShop" element={<DemoIframe />} />
-                <Route path="/demo/jewelry" element={<JewelryDemoIframe />} />
             </Routes>
 
             <ContactsSection />

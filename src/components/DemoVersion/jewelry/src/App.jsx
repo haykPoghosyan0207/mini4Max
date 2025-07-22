@@ -27,11 +27,12 @@ function App() {
         // <AuthProvider>
             <WishlistProvider>
                 <CartProvider>
-                    <Router>
+                    <Router basename="/demo-2">
                         <Header />
 
                         <Routes>
                             <Route path="/" element={<Home />} />
+                            <Route path="/index.html" element={<Home />} />
                             <Route path="/wishlist" element={<Wishlist />} />
                             <Route path="/cart" element={<CartPage />} />
                             <Route path="/about" element={<About />} />

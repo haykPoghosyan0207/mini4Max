@@ -26,7 +26,7 @@ export default function DemoSection() {
                     <button
                         className="demo-button"
                         onClick={() =>
-                            window.open('/demo/clothersShop/index.html', '_blank', 'noopener,noreferrer')
+                            window.open('/demo-1/index.html', '_blank', 'noopener,noreferrer')
                         }
                     >
                         Դիտել Դեմոն 1 <FaArrowRight className="arrow-icon" />
@@ -44,7 +44,7 @@ export default function DemoSection() {
                     <button
                         className="demo-button"
                         onClick={() =>
-                            window.open('/demo/jewelry/index.html', '_blank', 'noopener,noreferrer')
+                            window.open('/demo-2/index.html', '_blank', 'noopener,noreferrer')
                         }
                     >
                         Դիտել Դեմոն 2 <FaArrowRight className="arrow-icon" />

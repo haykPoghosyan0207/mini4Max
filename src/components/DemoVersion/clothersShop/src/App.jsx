@@ -24,13 +24,14 @@ function App() {
     return (
         <WishlistProvider>
             <CartProvider>
-                <Router>
+                <Router basename="/demo-1">
                     <Navbar />
                     {/*<TopProductSlider />*/}
-                    <Route path="/home" element={<Home />} />
                     <main>
                         <Routes>
+                            <Route index element={<Home />} />
                             <Route path="/home" element={<Home />} />
+                            <Route path="/index.html" element={<Home />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/shop" element={<Shop />} />
                             <Route path="/wishlist" element={<Wishlist />} />
