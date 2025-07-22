@@ -20,7 +20,7 @@ export default function ContactsSection() {
                 <div className="contactRightTwo">
                     <div className="sectionTitle">Կապ մեզ հետ</div>
                     <div className="contactDetail">
-                        <i className="fa fa-phone" /> +374 00 000 000
+                        <i className="fa fa-phone" /> +374 93 11 50 90
                     </div>
                     <div className="contactDetail">
                         <i className="fa fa-envelope" /> info@mini4max.com

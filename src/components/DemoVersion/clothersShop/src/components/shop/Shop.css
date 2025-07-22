@@ -1,0 +1,239 @@
+.shop-container {
+    padding: 40px 0;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.shop-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.shop-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .shop-layout {
+        flex-direction: row;
+    }
+}
+
+.shop-sidebar {
+    width: 100%;
+    max-width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background-color: #1e1e1e;
+    padding: 24px 0 ;
+    border-radius: 12px;
+}
+
+.sidebar-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.category-button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    background-color: #2c2c2c;
+    border: none;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.category-button:hover {
+    background-color: #3f3f3f;
+}
+
+.category-button.active {
+    background-color: #facc15;
+    color: #000;
+    font-weight: bold;
+}
+
+.price-filter {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.price-input {
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    color: #f0f0f0;
+    padding: 6px 8px;
+    width: 50%;
+    border-radius: 4px;
+}
+
+.filter-button {
+    background-color: #facc15;
+    color: #000;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filter-button:hover {
+    background-color: #eab308;
+}
+
+.reset-button {
+    margin-left: 8px;
+    color: #ff6b6b;
+    font-size: 14px;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.shop-products {
+    width: 100%;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 640px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.pagination {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.page-button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid #888;
+    background-color: transparent;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.page-button:hover {
+    background-color: #333;
+}
+
+.page-button.active {
+    background-color: #facc15;
+    color: #000;
+}
+/* Մոբայլ էկրանի համար մինչև 767px լայնություն */
+@media (max-width: 767px) {
+    .shop-layout {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .shop-sidebar {
+        max-width: 100%;
+        padding: 16px 0 ;
+        border-radius: 0;
+        background-color: #1e1e1e;
+    }
+
+    .category-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .category-button {
+        flex: 1 1 auto;
+        font-size: 14px;
+        padding: 8px 10px;
+        text-align: center;
+    }
+
+    .price-filter {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .price-input {
+        width: 100%;
+    }
+
+    .filter-button, .reset-button {
+        width: 100%;
+        margin: 6px 0 0 0;
+    }
+
+    .reset-button {
+        text-align: center;
+    }
+
+    .shop-products {
+        width: 100%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .pagination {
+        gap: 6px;
+    }
+
+    .page-button {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar-title {
+        font-size: 18px;
+    }
+
+    .category-button {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+    .price-input {
+        padding: 5px 0;
+    }
+
+    .filter-button, .reset-button {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+    .page-button {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}
+

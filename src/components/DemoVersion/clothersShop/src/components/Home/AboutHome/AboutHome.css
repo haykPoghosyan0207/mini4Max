@@ -1,0 +1,109 @@
+.aboutHome {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.aboutHomeImg {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.homeAboutImage {
+    width: 80%;
+}
+.aboutHomeImg img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.aboutHomeDesc {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.aboutHomeDesc h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0 0 10px;
+    color: #333;
+    width: 100%;
+}
+
+.aboutHomeDesc p {
+    width: 100%;
+    font-size: 2rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.aboutHomeDesc button {
+    min-width: 250px;
+    font-size: 1.2rem;
+    min-height: 60px;
+    color: white;
+    background: #be9667;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.aboutHomeDesc button:hover {
+    background: #a07b50;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+    .aboutHome {
+        height: auto;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .aboutHomeImg, .aboutHomeDesc {
+        width: 80%;
+        height: auto;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutHomeDesc {
+        gap: 20px;
+    }
+
+    .aboutHomeDesc h1, .aboutHomeDesc p {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutHomeDesc h1 {
+        font-size: 2rem;
+    }
+
+    .aboutHomeDesc button {
+        min-width: 200px;
+        font-size: 1rem;
+        min-height: 50px;
+    }
+}

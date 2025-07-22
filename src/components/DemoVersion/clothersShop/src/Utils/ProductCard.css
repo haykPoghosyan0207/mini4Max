@@ -1,0 +1,106 @@
+.product-card {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Վերևի մասը՝ նկար + actions */
+.product-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+/* Նկարի բլոկ */
+.product-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 75%;
+}
+.product-image {
+    width: 100%;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Ակտիվ կոճակներ՝ աջ կողմում վերտիկալ */
+.action-buttons.right-aligned {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.icon-button {
+    background-color: #2d2d2d;
+    color: #facc15;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    border: none;
+}
+.icon-button:hover {
+    background-color: #444;
+}
+.wishlist-icon {
+    color: #9ca3af;
+}
+.wishlist-icon-active {
+    color: #ef4444;
+}
+
+/* Sold out վահանակ */
+.sold-out-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+.sold-out-button {
+    background-color: #facc15;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Տեղեկատվական բլոկ՝ տող առ տող */
+.product-info.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+}
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+}
+.product-title:hover {
+    color: #facc15;
+}
+.product-description {
+    color: #d1d5db;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.product-price {
+    color: #facc15;
+    font-weight: 600;
+    font-size: 16px;
+}

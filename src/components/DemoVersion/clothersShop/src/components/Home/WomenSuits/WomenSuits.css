@@ -1,0 +1,137 @@
+.women-products-wrapper {
+    background-color: #fffaf5;
+    padding: 60px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.women-products-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.women-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ֆիքսված 4 սյուն */
+    gap: 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 1024px) {
+    .women-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .women-products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.women-product-card {
+    height: 550px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.women-product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.women-product-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.women-product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.women-product-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.women-product-price {
+    font-size: 16px;
+    color: #888;
+    margin-bottom: 16px;
+}
+
+.women-add-btn {
+    background-color: #ff8fab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.women-add-btn:hover {
+    background-color: #ff7099;
+}
+
+.women-products-loading {
+    text-align: center;
+    padding: 100px 0;
+    font-size: 20px;
+    color: #888;
+}
+@media (max-width: 480px) {
+    .women-products-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .women-product-card {
+        height: auto;
+        border-radius: 12px;
+    }
+
+    .women-product-img img {
+        height: 240px;
+        object-fit: cover;
+    }
+
+    .women-product-info {
+        padding: 16px;
+    }
+
+    .women-product-name {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+
+    .women-product-price {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .women-add-btn {
+        font-size: 13px;
+        padding: 8px 18px;
+    }
+
+    .women-products-wrapper {
+        padding: 40px 0;
+    }
+}

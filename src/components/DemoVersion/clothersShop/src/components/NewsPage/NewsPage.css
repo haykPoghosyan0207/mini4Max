@@ -1,0 +1,74 @@
+/* Wrapper ամբողջ էջի */
+.news-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    background-color: #121212; /* մուգ ֆոն */
+    min-height: 100vh;
+    color: #e0e0e0; /* բաց տեքստ */
+}
+
+/* Վերնագիր */
+.news-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Grid դասավորություն */
+.news-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+/* Քարտեր */
+.news-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: #1e1e1e; /* մուգ քարտ */
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Զիգզագ ուղղություններ */
+.news-card.left {
+    flex-direction: row;
+}
+
+.news-card.right {
+    flex-direction: row-reverse;
+}
+
+/* Նկար */
+.news-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Բովանդակություն */
+.news-content {
+    flex: 1;
+}
+
+.news-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.news-content p {
+    font-size: 1rem;
+    color: #cccccc;
+}

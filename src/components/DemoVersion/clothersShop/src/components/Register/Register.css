@@ -1,0 +1,100 @@
+.register-wrapper {
+    max-width: 450px;
+    margin: 3rem auto;
+    padding: 2rem 2.5rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+    color: #2c3e50;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #34495e;
+}
+
+.input-field {
+    padding: 0.65rem 1rem;
+    border: 1.8px solid #d1d8e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: white;
+}
+
+.input-field:focus {
+    border-color: #0984e3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(9, 132, 227, 0.5);
+}
+
+.error-message-list {
+    margin-top: -0.6rem;
+    margin-bottom: 1rem;
+    padding-left: 1.2rem;
+    color: #e74c3c;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.error-message-list li {
+    margin-bottom: 0.3rem;
+}
+
+.register-button {
+    padding: 0.75rem 0;
+    background: linear-gradient(135deg, #0984e3, #74b9ff);
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(9, 132, 227, 0.4);
+}
+
+.register-button:hover {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+    box-shadow: 0 6px 14px rgba(9, 132, 227, 0.6);
+}
+.login-redirect-text {
+    margin-top: 1.2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.login-link {
+    color: #0984e3;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+    color: #065aab;
+}

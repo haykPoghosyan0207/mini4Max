@@ -1,0 +1,134 @@
+.HomeBlog {
+    display: flex;
+    width: 100%;
+    min-height: 70vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.blogCard {
+    width: 80%;
+    min-height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+    box-sizing: border-box;
+}
+
+.homeBlogImg {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeBlogImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.homeBlogDesc {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.homeBlogDesc > h2 {
+    font-size: 48px;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0;
+    color: #333;
+}
+
+.homeBlogDesc > p {
+    font-size: 16px;
+    color: #555;
+    width: 100%;
+    line-height: 1.6;
+}
+
+.homeBlogDesc > button {
+    min-width: 200px;
+    font-size: 1.1rem;
+    min-height: 50px;
+    color: white;
+    background: #be9667;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.homeBlogDesc > button:hover {
+    background: #a77c53;
+}
+
+/* ============ Responsive Styles ============ */
+@media (max-width: 1024px) {
+    .blogCard {
+        gap: 5%;
+    }
+
+    .homeBlogDesc > h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blogCard {
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .homeBlogImg,
+    .homeBlogDesc {
+        width: 90%;
+        height: auto;
+    }
+
+    .homeBlogDesc {
+        align-items: center;
+    }
+
+    .homeBlogDesc > h2 {
+        font-size: 32px;
+    }
+
+    .homeBlogDesc > p {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .homeBlogDesc > h2 {
+        font-size: 26px;
+    }
+
+    .homeBlogDesc > button {
+        min-width: 160px;
+        font-size: 1rem;
+        min-height: 45px;
+    }
+
+    .homeBlogDesc > p {
+        font-size: 14px;
+    }
+}

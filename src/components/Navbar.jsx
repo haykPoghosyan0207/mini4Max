@@ -25,7 +25,7 @@ export function Navbar() {
                     <li> <Link to="/aboutPage">Մեր մասին</Link></li>
                     <li>  <Link to="/services">Ծառայություններ</Link></li>
                     <li>  <Link to="/blog">Թրենդներ</Link></li>
-                    <li><a href=""> +65462164</a> </li>
+                    <li> +374 93 11 50 90 </li>
 
                 </ul>
             </div>

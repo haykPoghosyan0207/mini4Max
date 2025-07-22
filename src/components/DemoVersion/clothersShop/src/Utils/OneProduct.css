@@ -1,0 +1,147 @@
+.product-page-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    background-color: #121212;
+    color: #e5e5e5;
+}
+
+@media (min-width: 768px) {
+    .product-page-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.product-page-image-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-page-main-image {
+    width: 50%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.product-page-info-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+.product-page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.product-page-wishlist-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.wishlist-icon {
+    color: #9ca3af;
+    transition: color 0.3s;
+}
+.wishlist-icon:hover {
+    color: #f87171;
+}
+.wishlist-icon-active {
+    color: #ef4444;
+}
+
+.product-page-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #facc15;
+}
+
+.product-page-multiplier {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    margin-left: 8px;
+}
+
+.product-page-description {
+    color: #d1d5db;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.product-page-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.product-page-quantity button {
+    background: #2d2d2d;
+    color: #f0f0f0;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.product-page-quantity button:hover {
+    background: #444;
+}
+.product-page-quantity span {
+    font-weight: 500;
+}
+
+.product-page-actions {
+    margin-top: 20px;
+}
+
+.product-page-cart-btn {
+    background-color: #facc15;
+    color: #000;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s;
+}
+.product-page-cart-btn:hover {
+    background-color: #eab308;
+}
+
+.product-page-loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #9ca3af;
+}
+
+.product-page-error {
+    text-align: center;
+    padding: 40px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+}
+.product-page-error h2 {
+    font-size: 1.2rem;
+    color: #ef4444;
+    font-weight: bold;
+}
+.product-page-error a {
+    color: #3b82f6;
+    text-decoration: underline;
+}
