@@ -11,6 +11,12 @@ export default function DemoSection() {
         "/images/demoImages/img_3.jpg",
         "/images/demoImages/img_6.jpg",
     ];
+    const slidesTwo = [
+        "/images/demoImages/img_11.jpg",
+        "/images/demoImages/img_7.jpg",
+        "/images/demoImages/img_8.jpg",
+        "/images/demoImages/img_10.jpg",
+    ];
 
     return (
         <section className="demo-section">
@@ -35,7 +41,7 @@ export default function DemoSection() {
 
                 <div className="demo-slider-block">
                     <Swiper spaceBetween={20} slidesPerView={1} loop={true}>
-                        {slides.map((img, index) => (
+                        {slidesTwo.map((img, index) => (
                             <SwiperSlide key={`second-${index}`}>
                                 <img src={img} alt={`Slide 2 - ${index + 1}`} className="demo-image" />
                             </SwiperSlide>
