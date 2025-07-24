@@ -1,8 +1,6 @@
 .demo-section {
     width: 100%;
-    margin: 2rem 0;
-    padding: 60px 0;
-    background-color: #fefefe;
+    background-color: #002f4b;
 }
 
 .demo-content {
@@ -30,7 +28,7 @@
 }
 
 .demo-image {
-    width: 100%;
+    width: 85%;
     height: 100%;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
@@ -62,13 +60,48 @@
     font-size: 18px;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Icon arrows (you can hide default text) */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
 .swiper-wrapper {
     max-width: 100% !important;
     height: 90%;
+
 }
 
 .swiper-slide {
     width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 100% !important;
 }
 
@@ -84,6 +117,7 @@
         max-width: 100%;
     }
 }
+
 @media (max-width: 480px) {
     .demo-content {
         padding: 0 10px;
@@ -109,5 +143,10 @@
 
     .arrow-icon {
         font-size: 16px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        padding: 6px;
     }
 }

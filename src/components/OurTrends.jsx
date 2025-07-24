@@ -1,7 +1,10 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 export default function OurTrends() {
+    const navigate = useNavigate();
     const trends = [
         {
             image: '/images/blogsIImages/lightbulb_character.png',
@@ -17,7 +20,7 @@ export default function OurTrends() {
         },
         {
             image: '/images/blogsIImages/people_speech_bubbles.png',
-            title: 'Նձնական շփում զանգվածային աշխարհում',
+            title: 'Անձնական շփում զանգվածային աշխարհում',
         },
         {
             image: 'public/images/blogsIImages/open_door_icon.png',
@@ -57,8 +60,8 @@ export default function OurTrends() {
     const visibleTrends = trends.slice(currentIndex, currentIndex + visibleCount);
 
     return (
-        <div className="ourTrends" style={{ padding: "20px 0", textAlign: "center" }}>
-            <h2 className="sectionTitle" style={{ marginBottom: "30px" }}>Թրենդները</h2>
+        <div className="ourTrends" style={{padding: "20px 0", textAlign: "center"}}>
+            <h2 className="sectionTitle" style={{marginBottom: "30px"}}>Թրենդները</h2>
 
             <div style={{
                 display: "flex",
@@ -67,7 +70,6 @@ export default function OurTrends() {
                 gap: "16px",
                 flexWrap: "nowrap"
             }}>
-                {/* ← Prev */}
                 <button
                     onClick={prev}
                     disabled={currentIndex === 0}
@@ -104,7 +106,7 @@ export default function OurTrends() {
                             className="trendItem"
                             style={{
                                 flex: "0 0 auto",
-                                width: visibleCount === 1 ? "90vw" : "25%",
+                                width: "250px",
                                 maxWidth: visibleCount === 1 ? "90vw" : "none",
                                 backgroundColor: "#EC8305",
                                 borderRadius: "12px",
@@ -114,42 +116,34 @@ export default function OurTrends() {
                                 flexDirection: "column",
                                 minHeight: "430px",
                                 transition: "transform 0.3s ease",
+                                cursor: "pointer",
                             }}
+                            onClick={() => navigate("/blog")}
                         >
                             <div
                                 className="trendCard"
                                 style={{
                                     backgroundImage: `url(${trend.image})`,
-                                    backgroundSize: "contain",
-                                    backgroundPosition: "center",
-                                    backgroundRepeat: "no-repeat",
-                                    height: "300px",
                                 }}
                             />
                             <div className="trendCardContent" style={{
-                                backgroundColor: "white",
+                                textAlign: "center",
+                                backgroundColor: "#EC8305",
                                 padding: "12px",
                                 flexGrow: 1,
                                 display: "flex",
                                 flexDirection: "column",
                                 justifyContent: "space-between",
                             }}>
-                                <h3 className="trendTitle" style={{ color: "#EC8305", marginBottom: "10px", fontSize: "18px" }}>
+                                <h3 className="trendTitle"
+                                    style={{color: "white", marginBottom: "10px", fontSize: "25px"}}>
                                     {trend.title}
                                 </h3>
                                 {trend.description && (
-                                    <p className="trendDesc" style={{ color: "#000", fontSize: "14px" }}>{trend.description}</p>
+                                    <p className="trendDesc"
+                                       style={{color: "#000", fontSize: "14px"}}>{trend.description}</p>
                                 )}
-                                <div className="readMore" style={{ textAlign: "right", marginTop: "auto" }}>
-                                    <Link to="/blog" style={{
-                                        color: "#E07116",
-                                        textDecoration: "none",
-                                        fontWeight: "bold",
-                                        fontSize: "14px"
-                                    }}>
-                                        կարդալ ավելին <i className="fa fa-long-arrow-right"></i>
-                                    </Link>
-                                </div>
+
                             </div>
                         </div>
                     ))}

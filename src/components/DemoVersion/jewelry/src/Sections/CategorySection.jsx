@@ -6,25 +6,25 @@ export default function CategoryGrid() {
         {
             id: 1,
             name: 'Ականջօղեր',
-            image: '/images/akanjox.jpg',
+            image: './images/akanjox.jpg',
             link: '/shop?category=Ականջօղեր'
         },
         {
             id: 2,
             name: 'Հավաքածուներ',
-            image: '/images/havaqatsu.jpg',
+            image: './images/havaqatsu.jpg',
             link: '/shop?category=Հավաքածուներ'
         },
         {
             id: 3,
             name: 'Մատանիներ',
-            image: '/images/matani.jpg',
+            image: './images/matani.jpg',
             link: '/shop?category=Մատանիներ'
         },
         {
             id: 4,
             name: 'Թևնոցներ',
-            image: '/images/tevnoc.jpg',
+            image: './images/tevnoc.jpg',
             link: '/shop?category=Թևնոցներ'
         },
     ];
@@ -42,14 +42,12 @@ export default function CategoryGrid() {
                             key={cat.id}
                             className="relative w-full h-64 rounded-lg overflow-hidden shadow-md group"
                         >
-                            {/* Background image */}
                             <img
                                 src={cat.image}
                                 alt={cat.name}
                                 className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
                             />
 
-                            {/* Overlay */}
                             <div className="absolute inset-0 bg-black bg-opacity-30"></div>
 
                             {/* Centered Content */}

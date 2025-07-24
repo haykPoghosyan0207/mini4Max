@@ -24,7 +24,7 @@ export default function HomeTestImonials() {
         <div
             className="HomeTestImonials"
             style={{
-                backgroundImage: `url(src/components/DemoVersion/clothersShop/public/images/homeImages/suitsModeling.jpg)`,
+                backgroundImage: `url(./images/homeImages/suitsModeling.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 padding: "60px 0",

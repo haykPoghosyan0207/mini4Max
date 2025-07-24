@@ -34,6 +34,7 @@
     align-items: center;
     max-width: 600px;
     font-size: 18px;
+    font-family: cursive;
     line-height: 1.6;
 }
 
@@ -43,6 +44,19 @@
     padding: 30px 0;
     text-align: center;
     height: 55vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.AboutPageTitle {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121212;
+    background: linear-gradient(180deg, rgba(0, 18, 18, 1) 0%, #1e293b 1%, #1e293b 90%, rgba(18, 18, 18, 1) 100%);
 }
 
 .valuesTitle {
@@ -63,9 +77,9 @@
 .aboutCard {
     background-color: #1e293b;
     border-radius: 16px;
-    height: 300px;
+    height: 350px;
     padding: 20px;
-    width: 150px;
+    width: 300px;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
@@ -76,15 +90,11 @@
     position: relative;
 }
 
-.aboutCard:hover {
-    width: 240px;
-}
-
 .aboutCardText {
     color: orange;
     font-size: 20px;
     font-weight: 600;
-    transform: rotate(90deg);
+    /*transform: rotate(90deg);*/
     transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 1;
     white-space: nowrap;
@@ -92,21 +102,14 @@
 
 .aboutCardDesc {
     color: white;
-    font-size: 12px;
-    opacity: 0;
+    font-size: 16px;
+    height: 90%;
+    opacity: 1;
     transition: opacity 0.3s ease;
-    max-height: 0;
     overflow: hidden;
     text-align: center;
 }
-.aboutCard:hover .aboutCardText {
-    transform: rotate(0deg);
-}
 
-.aboutCard:hover .aboutCardDesc {
-    opacity: 1;
-    max-height: 200px;
-}
 
 .smartFeatures {
     padding: 40px 0;
@@ -174,14 +177,8 @@
         margin-bottom: 20px;
     }
 
-    .cardText {
-        transform: rotate(0deg) !important;
-        text-align: center;
-    }
 
-    .valueCard:hover .cardText {
-        transform: rotate(0deg);
-    }
+
     .aboutHeaderImage img {
         width: 100%;
     }
@@ -238,82 +235,47 @@
 }
 
 @media (max-width: 480px) {
-    .aboutHeader {
-        padding: 15px 0px;
-    }
-
-    .aboutHeaderImage {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-
-    .aboutHeaderImage img {
-        width: 90%;
-    }
-
     .aboutHeaderText {
-        width: 100%;
         font-size: 14px;
-        line-height: 1.5;
     }
 
-    .valuesTitle {
-        font-size: 24px;
-        margin-bottom: 24px;
+    .valuesSection {
+        height: auto;
+        padding: 24px 0;
+    }
+
+    .aboutGrid {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        height: auto;
     }
 
     .aboutCard {
         width: 90%;
-        padding: 16px;
         height: auto;
-        rotate: 0;
+        max-height: none;
     }
 
     .aboutCardText {
-        transform: rotate(0deg) !important;
-        text-align: center;
-
-    }
-    .aboutCard:hover {
-        height: 1500px;
+        font-size: 16px;
     }
 
-    .aboutCard:hover .aboutCardText {
-        font-size: 12px;
-        transform: rotate(0deg);
-    }
-    .aboutCard:hover .aboutGridDesc {
-        height: 98%;
-    }
-
-
-    .aboutGridDesc {
-        font-size: 13px;
+    .aboutCardDesc {
+        font-size: 14px;
+        line-height: 1.5;
     }
 
     .smartFeatures {
-        padding: 15px 0;
+        padding: 20px 0;
     }
 
     .featureRow {
-        gap: 15px;
-    }
-
-    .featureImg {
-        width: 100%;
-    }
-
-    .featureText {
-        width: 100%;
-        /*padding: 0 12px;*/
-    }
-
-    .featureText h3 {
-        font-size: 18px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .featureText p {
-        font-size: 14px;
+        font-size: 15px;
     }
 }

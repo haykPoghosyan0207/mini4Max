@@ -59,8 +59,9 @@ function App() {
                             <OurProjects />
                             <DemoSection />
                             <About />
-                            <OurTrends />
                             <PricePlan />
+
+                            <OurTrends />
                         </>
                     }
                 />

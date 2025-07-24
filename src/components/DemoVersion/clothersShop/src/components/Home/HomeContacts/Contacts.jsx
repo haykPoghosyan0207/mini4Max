@@ -8,7 +8,7 @@ export default function Contacts() {
                 {/* Left Side */}
                 <div className="contacts-left">
                     <img
-                        src="src/components/DemoVersion/clothersShop/public/images/homeImages/contactsImg.jpg"
+                        src="./images/homeImages/contactsImg.jpg"
                         alt="Tailoring"
                         className="contacts-image"
                     />

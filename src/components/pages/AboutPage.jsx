@@ -54,7 +54,10 @@ export default function AboutPage() {
             </div>
 
             <div className="valuesSection">
-                <h2 className="valuesTitle">Արժեքներ</h2>
+                <div className="AboutPageTitle">
+                    <h2 className="valuesTitle">Արժեքներ</h2>
+
+                </div>
                 <div className="aboutGrid">
                     <div className="aboutCard">
                         <div className="aboutCardText">Հուսալիություն</div>
@@ -85,7 +88,7 @@ export default function AboutPage() {
                         <div className="aboutCardText">Հասանելիություն</div>
                         <div className="aboutCardDesc">
                             <p>
-                                Մենք բացում ենք նոր հորիզոններ՝ հնարավորություն տալով կիրառել լուծումներ, որոնք նախկինում անհասանելի էին: Մեր ծառայությունները թույլ են տալիս հաղթահարել նախկինում գոյություն ունեցող սահմանափակումները և նոր հեռանկարներ են բացում բիզնեսի, կրթության, տեխնոլոգիաների և առհասարակ կյանքի համար</p>
+                                Մենք բացում ենք նոր հորիզոններ՝ հնարավորություն տալով կիրառել լուծումներ, որոնք նախկինում անհասանելի էին: Մեր ծառայությունները թույլ են տալիս հաղթահարել նախկինում գոյություն ունեցող սահմանափակումները և նոր հեռանկարներ են բացում բիզնեսի, կրթության, տեխնոլոգիաների և առհասարակ կյանքի համար:</p>
                         </div>
                     </div>
                     <div className="aboutCard">
