@@ -26,7 +26,7 @@ function App() {
             <CartProvider>
                 <Router basename="/demo-1">
                     <Navbar />
-                    {/*<TopProductSlider />*/}
+                    <TopProductSlider />
                     <main>
                         <Routes>
                             <Route index element={<Home />} />

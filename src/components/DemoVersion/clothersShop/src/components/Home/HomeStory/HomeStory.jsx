@@ -40,7 +40,7 @@ export default function HomeStory() {
                 className="home-story-right"
                 style={{
                     flex: 1,
-                    backgroundImage: `url(src/components/DemoVersion/clothersShop/public/images/homeImages/HomeStory.jpg)`,
+                    backgroundImage: `url(./images/homeImages/HomeStory.jpg)`,
                     backgroundSize: "contain",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",

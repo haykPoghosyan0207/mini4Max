@@ -5,7 +5,7 @@ export default function FeaturedBanner() {
     return (
         <section
             className="relative w-full h-[400px] bg-cover bg-center flex items-center justify-center"
-            style={{ backgroundImage: "url('/images/background.jpg')" }}
+            style={{ backgroundImage: "url('./images/background.jpg')" }}
         >
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
