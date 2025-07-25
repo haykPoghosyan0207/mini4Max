@@ -10,13 +10,12 @@
 }
 
 .blogCard {
-    width: 50%;
-    height: 350px;
+    width: 90%;
+    height: 550px;
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
     align-items: center ;
-    justify-content: center;
+    justify-content: end;
     border-radius: 10px;
     color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -28,8 +27,8 @@
 
 .blogCard img {
     padding-top: 2%;
-    width: 60%;
-    height: 250px;
+    width: 80%;
+    height: 350px;
     object-fit: contain;
     border-radius: 8px;
     object-position: center;
@@ -43,8 +42,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #ffffff;
-    background-color: #E07116;
+    color: black;
+    background-color: transparent;
     padding: 0;
     margin: 0;
 }

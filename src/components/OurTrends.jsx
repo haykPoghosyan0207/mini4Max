@@ -39,26 +39,23 @@ export default function OurTrends() {
     useEffect(() => {
         const handleResize = () => {
             setVisibleCount(window.innerWidth <= 768 ? 1 : 4);
-            setCurrentIndex(0); // Էկրանի չափի փոփոխության դեպքում վերադարձրեք սկզբից
+            setCurrentIndex(0);
         };
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
     const next = () => {
-        if (currentIndex + visibleCount < trends.length) {
-            setCurrentIndex(currentIndex + 1);
-        }
+        setCurrentIndex((prev) => (prev + 1) % trends.length);
     };
 
     const prev = () => {
-        if (currentIndex > 0) {
-            setCurrentIndex(currentIndex - 1);
-        }
+        setCurrentIndex((prev) => (prev - 1 + trends.length) % trends.length);
     };
-
-    const visibleTrends = trends.slice(currentIndex, currentIndex + visibleCount);
-
+    const visibleTrends = Array.from({ length: visibleCount }).map((_, i) => {
+        const trendIndex = (currentIndex + i) % trends.length;
+        return trends[trendIndex];
+    });
     return (
         <div className="ourTrends" style={{padding: "20px 0", textAlign: "center"}}>
             <h2 className="sectionTitle" style={{marginBottom: "30px"}}>Թրենդները</h2>
@@ -72,7 +69,6 @@ export default function OurTrends() {
             }}>
                 <button
                     onClick={prev}
-                    disabled={currentIndex === 0}
                     style={{
                         border: "none",
                         background: "#EC8305",
@@ -81,8 +77,8 @@ export default function OurTrends() {
                         borderRadius: "50%",
                         width: "45px",
                         height: "45px",
-                        cursor: currentIndex === 0 ? "not-allowed" : "pointer",
-                        opacity: currentIndex === 0 ? 0.5 : 1,
+                        cursor: "pointer",
+                        opacity: 1,
                         boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
                         transition: "all 0.2s ease",
                     }}
@@ -95,8 +91,6 @@ export default function OurTrends() {
                 <div style={{
                     display: "flex",
                     gap: "16px",
-                    overflow: "hidden",
-                    maxWidth: visibleCount === 1 ? "90vw" : "80%",
                     justifyContent: "center",
                     flexWrap: "nowrap",
                 }}>
@@ -105,16 +99,8 @@ export default function OurTrends() {
                             key={index}
                             className="trendItem"
                             style={{
-                                flex: "0 0 auto",
-                                width: "250px",
-                                maxWidth: visibleCount === 1 ? "90vw" : "none",
-                                backgroundColor: "#EC8305",
-                                borderRadius: "12px",
-                                overflow: "hidden",
-                                boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
                                 display: "flex",
                                 flexDirection: "column",
-                                minHeight: "430px",
                                 transition: "transform 0.3s ease",
                                 cursor: "pointer",
                             }}
@@ -124,19 +110,17 @@ export default function OurTrends() {
                                 className="trendCard"
                                 style={{
                                     backgroundImage: `url(${trend.image})`,
+                                    height: "300px"
                                 }}
-                            />
+                            ></div>
                             <div className="trendCardContent" style={{
                                 textAlign: "center",
-                                backgroundColor: "#EC8305",
-                                padding: "12px",
                                 flexGrow: 1,
                                 display: "flex",
                                 flexDirection: "column",
                                 justifyContent: "space-between",
                             }}>
-                                <h3 className="trendTitle"
-                                    style={{color: "white", marginBottom: "10px", fontSize: "25px"}}>
+                                <h3 className="trendTitle">
                                     {trend.title}
                                 </h3>
                                 {trend.description && (
@@ -152,7 +136,6 @@ export default function OurTrends() {
                 {/* → Next */}
                 <button
                     onClick={next}
-                    disabled={currentIndex + visibleCount >= trends.length}
                     style={{
                         border: "none",
                         background: "#EC8305",
@@ -161,8 +144,8 @@ export default function OurTrends() {
                         borderRadius: "50%",
                         width: "45px",
                         height: "45px",
-                        cursor: currentIndex + visibleCount >= trends.length ? "not-allowed" : "pointer",
-                        opacity: currentIndex + visibleCount >= trends.length ? 0.5 : 1,
+                        cursor: "pointer",
+                        opacity: 1,
                         boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
                         transition: "all 0.2s ease",
                     }}

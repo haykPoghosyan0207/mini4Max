@@ -754,6 +754,10 @@
     text-align: center;
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .trendsGallery {
@@ -768,75 +772,52 @@
 .trendCard {
     width: 100%;
     height: 350px;
-    background-color: #1A1B1E;
     border-radius: 12px;
-    overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* թաքնված */
-    transition: clip-path 0.8s ease;
 }
-
-
-
 
 .trendCardContent {
     width: 100%;
-    height: 300px;
+    height: 50px;
     display: flex;
-    background-color: white;
+    background-color: #081F2A;
     justify-content: center;
     flex-direction: column;
-    margin-bottom: 1%;
+    border-radius: 0 0 12px 12px;
 }
 
 .trendCardContent h3 {
-    font-size: 30px;
-    margin-top: 50%;
-    color: black;
-    transform: rotate(90deg);
+    font-size: 20px;
+    color: white;
     transition: transform 1s ease;
 }
 
 
 .trendItem {
-
-    height: 100%;
+    width: 350px;
+    min-height: 430px;
     display: flex;
+    background: transparent;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     transition: transform 0.5s ease;
-    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border:1px solid #E07116;
 }
 
 .trendItem:hover {
     width: 350px;
     transform: translateY(-8px);
 }
-.trendItem:hover .trendCardContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-}
-.trendItem:hover .trendCardContent h3 {
-    margin: 0;
-    transform: rotate(0deg);
 
-}
-.trendItem:hover .trendCard {
-    height: 300px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* բացված */
-}
 .trendImage {
-    height: 200px;
+    height:200px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
