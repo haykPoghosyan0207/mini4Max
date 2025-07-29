@@ -21,6 +21,10 @@ for DEMO in "${DEMOS[@]}"; do
     BASE_PATH="/demo/clothersShop/"
   elif [ "$DEMO" = "jewelry" ]; then
     BASE_PATH="/demo/jewelry/"
+  elif [ "$DEMO" = "furnitureNow" ]; then
+    BASE_PATH="/demo/furnitureNow/"
+  elif [ "$DEMO" = "flowers" ]; then
+    BASE_PATH="/demo/flowers/"
   else
     BASE_PATH="/"
   fi

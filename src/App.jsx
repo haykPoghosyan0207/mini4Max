@@ -55,7 +55,6 @@ function App() {
                         <>
                             <Header />
                             <ServiceSection />
-                            {/* <Partners /> */}
                             <OurProjects />
                             <DemoSection />
                             <About />
