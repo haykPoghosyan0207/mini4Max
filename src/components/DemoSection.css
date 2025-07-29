@@ -1,15 +1,16 @@
 .demo-section {
     width: 100%;
     background-color: #002f4b;
+    height: 120vh;
 }
 
 .demo-content {
     width: 100%;
-    height: 70vh;
+    height: 60vh;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    /*gap: px;*/
     justify-content: center;
     align-items: flex-start;
     box-sizing: border-box;

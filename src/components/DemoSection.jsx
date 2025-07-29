@@ -74,6 +74,53 @@ export default function DemoSection() {
                         Դիտել Դեմոն <FaArrowRight className="arrow-icon" />
                     </button>
                 </div>
+                <div className="demo-slider-block">
+                    <Swiper
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        loop={true}
+                        navigation={true}
+                        modules={[Navigation]}
+                    >
+                        {slidesTwo.map((img, index) => (
+                            <SwiperSlide key={`second-${index}`}>
+                                <img src={img} alt={`Slide 2 - ${index + 1}`} className="demo-image" />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                    <button
+                        className="demo-button"
+                        onClick={() =>
+                            window.open('/demo-3/index.html', '_blank', 'noopener,noreferrer')
+                        }
+                    >
+                        Դիտել Դեմոն <FaArrowRight className="arrow-icon" />
+                    </button>
+                </div>
+                <div className="demo-slider-block">
+                    <Swiper
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        loop={true}
+                        navigation={true}
+                        modules={[Navigation]}
+                    >
+                        {slidesTwo.map((img, index) => (
+                            <SwiperSlide key={`second-${index}`}>
+                                <img src={img} alt={`Slide 2 - ${index + 1}`} className="demo-image" />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                    <button
+                        className="demo-button"
+                        onClick={() =>
+                            window.open('/demo-4/index.html', '_blank', 'noopener,noreferrer')
+                        }
+                    >
+                        Դիտել Դեմոն <FaArrowRight className="arrow-icon" />
+                    </button>
+                </div>
+
             </div>
         </section>
     );
